@@ -1,4 +1,4 @@
-using System;git 
+using System;
 
 namespace Palindrome
 {
