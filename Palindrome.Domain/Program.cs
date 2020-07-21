@@ -5,29 +5,42 @@ namespace Palindrome
     class Program
     {
         static void Main()
-        {   
-            //This program convert the string to integer
-            //Store in a temp variable 
-            // Then it inverts the input
-            // If temp and input are equal it prints that it is a palindrome
-            int input;
-            int r;
-            int sum = 0; 
-            int temp;
+        {
+            string palindrome;
 
-            Console.Write("Enter the Number: ");
-            input = int.Parse(Console.ReadLine());
-            temp = input;
-            while (input > 0)
-            {
-                r = input % 10;
-                sum = (sum * 10) + r;
-                input = input / 10;
-            }
-            if (temp == sum)
-                Console.Write("Number is Palindrome.");
-            else
-                Console.Write("Number is not Palindrome");
+            palindrome = Console.ReadLine();
+
+            PalindromeChecker(palindrome);
+
+
+
         }
+
+        public static string Inverter(string input)
+        {
+            char[] word = input.ToCharArray();
+            char[] inverted = new char[input.Length];
+
+            for (var i = 0; i < word.Length; i++)s
+            {
+                inverted[i] = word[word.Length - i];
+            }
+            string result = new string(inverted);
+
+            return result;       
+        }
+
+        public static void PalindromeChecker(string palindrome)
+        {
+            if (Inverter(palindrome).Equals(palindrome))
+            {
+                Console.WriteLine("It is a palindrome");
+            }
+             else
+             {
+                Console.WriteLine("It is not a palindrome");
+              }
+        }
+
     }
 }
