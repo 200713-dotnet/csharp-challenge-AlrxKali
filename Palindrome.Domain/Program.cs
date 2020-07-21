@@ -12,8 +12,6 @@ namespace Palindrome
 
             PalindromeChecker(palindrome);
 
-
-
         }
 
         public static string Inverter(string input)
@@ -21,7 +19,7 @@ namespace Palindrome
             char[] word = input.ToCharArray();
             char[] inverted = new char[input.Length];
 
-            for (var i = 0; i < word.Length; i++)s
+            for (var i = 0; i < word.Length; i++)
             {
                 inverted[i] = word[word.Length - i];
             }
